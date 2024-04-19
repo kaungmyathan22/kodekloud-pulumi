@@ -21,3 +21,4 @@ ec2_instance = ec2.Instance("web-server",ami="ami-04f73ca9a4310089f",instance_ty
     "Name":"web server"
 },vpc_security_group_ids=[sg.id])
 pulumi.export('public_ip', ec2_instance.public_ip)
+pulumi.export('dns_url', ec2_instance.public_dns)
